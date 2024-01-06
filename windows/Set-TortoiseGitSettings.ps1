@@ -23,9 +23,9 @@ $diffTools =
 
 $BaseKey = "HKCU:\SOFTWARE\TortoiseGit"
 $ContextMenuEntriesDefault = 1030
-$ContextMenuEntrieshighDefault = 20
-$ContextMenuExtEntriesLowDefault = 40000000
-$ContextMenuExtEntriesHighDefault = 12000
+$ContextMenuEntrieshighDefault = 32
+$ContextMenuExtEntriesLowDefault = 1073741824
+$ContextMenuExtEntriesHighDefault = 73728
 
 function Set-TortoiseGitDiffTool {
     param ([string]$toolName)
@@ -66,8 +66,8 @@ function Set-TortoiseGitTool {
 
 Set-TortoiseGitDiffTool "TortoiseGitMerge"
 Set-TortoiseGitMergeTool "DiffMerge"
-Set-ItemProperty $BaseKey "ContextMenuEntries" 130406
-Set-ItemProperty $BaseKey "ContextMenuEntrieshigh" 20020
+Set-ItemProperty $BaseKey "ContextMenuEntries" 1246214
+Set-ItemProperty $BaseKey "ContextMenuEntrieshigh" 131104
 Set-ItemProperty $BaseKey "ContextMenuExtEntriesLow" $ContextMenuExtEntriesLowDefault
 Set-ItemProperty $BaseKey "ContextMenuExtEntriesHigh" $ContextMenuExtEntriesHighDefault
 Set-ItemProperty "$BaseKey\StatusColumns" "logloglist" 1f1
